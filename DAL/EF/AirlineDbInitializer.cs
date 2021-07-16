@@ -6,7 +6,7 @@ namespace DAL
     //  - CreateDatabaseIfNotExists
     //  - DropCreateDatabaseIfModelChanges
     //  - DropCreateDatabaseAlways
-    public class AirlineDbInitializer : DropCreateDatabaseAlways<AirlinesDbContext>
+    public class AirlineDbInitializer : CreateDatabaseIfNotExists<AirlinesDbContext>
     {
         protected override void Seed(AirlinesDbContext context)
         {
